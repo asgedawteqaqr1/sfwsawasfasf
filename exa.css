@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Share Tech Mono', monospace;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .screen, .main-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .screen {
+      font-size: 1em;
+      text-align: left;
+    }
+
+    .terminal-output {
+      width: 90%;
+      max-width: 800px;
+      height: 100%;
+      overflow-y: auto;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .main-content {
+      display: none;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: glitch 1s infinite;
+    }
+
+    .typing {
+      font-size: 1.25rem;
+      max-width: 800px;
+      white-space: pre-wrap;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background-color: #00ff00;
+      animation: blink 1s step-end infinite;
+      vertical-align: bottom;
+      margin-left: 2px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 10px #00ff00;
+  }
+  50% {
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.arena-btn {
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 1rem;
+  padding: 12px 24px;
+  cursor: pointer;
+  text-decoration: none;
+  display: none;
+  animation: glow 2s infinite ease-in-out;
+  transition: transform 0.3s ease, background 0.3s, color 0.3s;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.arena-btn:hover {
+  background: #00ff00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+    .arena-btn:hover {
+      background: #00ff00;
+      color: #000;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -2px 0 red, 2px 0 blue; }
+      40% { text-shadow: 2px 0 blue, -2px 0 red; }
+      60% { text-shadow: -2px 0 blue, 2px 0 red; }
+      80% { text-shadow: 2px 0 red, -2px 0 blue; }
+      100% { text-shadow: 0 0 5px #00ff00; }
+    }
+
+    @keyframes blink {
+      50% { background-color: transparent; }
+    }
