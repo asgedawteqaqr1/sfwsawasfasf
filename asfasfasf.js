@@ -62,7 +62,7 @@ function typeLine(line, callback, idx = 0) {
 function simulateMatrixDump(doneCallback) {
   const charset = "0123456789ABCDEF";
   let linesGenerated = 0;
-  const maxLines = 30;
+  const maxLines = 15;
 
   const interval = setInterval(() => {
     let line = "";
