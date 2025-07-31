@@ -4,7 +4,7 @@ const fakeCommands = [
   { type: "matrix", text: "Injecting payload" },
   { type: "text", text: "Payload delivered." },
   { type: "text", text: "Establishing root access... " },
-  { type: "text", text: "Access granted. Welcome Astaroth." },
+  { type: "text", text: "Access granted. Welcome Exanivar." },
   { type: "text", text: "" },
   { type: "text", text: "Decrypting system logs..." },
   { type: "text", text: "Extracting message..." }
