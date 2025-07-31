@@ -1,4 +1,5 @@
-* {
+  <style>
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -84,3 +85,4 @@
     @keyframes blink {
       50% { background-color: transparent; }
     }
+  </style>
