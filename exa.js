@@ -69,7 +69,7 @@ const fakeCommands = [
         let line = "";
         for (let i = 0; i < 60; i++) {
           line += charset[Math.floor(Math.random() * charset.length)];
-          if (i % 4 === 0) line += " ";
+          if (i % 10 === 0) line += " ";
         }
         terminalOutput.innerHTML += line + "\n";
         terminalOutput.scrollTop = terminalOutput.scrollHeight;
